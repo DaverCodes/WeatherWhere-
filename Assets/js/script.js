@@ -31,11 +31,12 @@ function getForecast(cityname) {
           const temperature = data.list[i].main.temp;
           const windSpeed = data.list[i].wind.speed;
           const humidity = data.list[i].main.humidity;
-          todayC.textContent = cityname + " " + today.format('MMM DD, YYYY [at] HH:mm a')
+          todayC.textContent = cityname + " " + today.format('MMM DD, YYYY [at] hh:mm a')
           todayT.textContent = "Temp: " + temperature + "°F"
           todayW.textContent = "Wind: " + windSpeed + "MPH"
           todayH.textContent = "Humidity: " + humidity  + "%"
           console.log(`Day ${(i / 8) + 1}:`);
+          console.log(`${icon}`);
           console.log(`Temperature: ${temperature}°F`);
           console.log(`Wind Speed: ${windSpeed} mph`);
           console.log(`Humidity: ${humidity}%`);
