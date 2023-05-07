@@ -31,92 +31,38 @@
       </header>
     
       <main class="container">
-        <!-- Bootstrap spacing utilities use m- for margin and p- for padding --> 
+        <!-- Bootstrap spacing utilities use m- for margin and p- for padding -->
         <section class="row my-4">
           <div class="col-12 col-md-9">
-            <h2>5-Day Forcast:</h2>
+            <h2>5-Day Forecast:</h2>
             <!-- Use justify-content utilities to change alignment of flex items on the main axis -->
             <section class="row justify-content-around">
               <div id="today">
-                <h2 id="todayC" ></h2>
+                <h2 id="todayC"></h2>
                 <p id="todayT"></p>
-                <p id="todayW"> </p>
+                <p id="todayW"></p>
                 <p id="todayH"></p>
-
-
               </div>
-              <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                <div class="card bg-secondary text-light">
-                  <div class="card-body">
-                    <p id="date" ></p>
-                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
-                    <p id="T"></p>
-                    <p id="W"> </p>
-                    <p id="H"></p>
+      
+              <!-- Use a loop to generate cards for each day in the forecast -->
+              <template id="card-template">
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                  <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                      <p class="date"></p>
+                      <img class="weather-icon" src="" alt="">
+                      <p class="temp"></p>
+                      <p class="description"></p>
+                      <p class="humidity"></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                <div class="card bg-secondary text-light">
-                  <div class="card-body">
-                    <p id="date" ></p>
-                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
-                    <p id="T"></p>
-                    <p id="W"> </p>
-                    <p id="H"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                <div class="card bg-secondary text-light">
-                  <div class="card-body">
-                    <p id="date" ></p>
-                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
-                    <p id="T"></p>
-                    <p id="W"> </p>
-                    <p id="H"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                <div class="card bg-secondary text-light">
-                  <div class="card-body">
-                    <p id="date" ></p>
-                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
-                    <p id="T"></p>
-                    <p id="W"> </p>
-                    <p id="H"></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                <div class="card bg-secondary text-light">
-                  <div class="card-body">
-                    <p id="date" ></p>
-                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
-                    <p id="T"></p>
-                    <p id="W"> </p>
-                    <p id="H"></p>
-                  </div>
-                </div>
-              </div>
-
-
+              </template>
+      
             </section>
           </div>
-          <!-- <div class="col-12 col-md-3">
-            <h2>About Us</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. A deleniti illo amet veniam. Enim dignissimos sint,
-              modi voluptate libero corporis ipsa consectetur commodi dolorum dolores vitae? Odit perspiciatis iure placeat.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, neque ab doloremque, harum corporis
-              voluptas explicabo amet culpa, odit autem totam itaque voluptatibus ipsa quos aperiam eius vel? Commodi,
-              nesciunt.
-            </p>
-          </div> -->
         </section>
-    
+      
         <section class="row justify-content-center my-4">
           <div class="col-12 col-sm-6 col-md-4">
           </div>
@@ -124,10 +70,11 @@
             <h2>Search for a City</h2>
             <form>
               <div class="form-group p-2">
-                <input  type="text" class="form-control" id="textArea" placeholder="previous search" />
+                <input type="text" class="form-control" id="textArea" placeholder="previous search" />
               </div>
-
-              <button id="searchButton" class="btn form-group btn-success m-2">Search</button>
+              <div class="form-group p-2">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
             </form>
           </div>
         </section>
