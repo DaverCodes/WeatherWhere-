@@ -31,38 +31,82 @@
       </header>
     
       <main class="container">
-        <!-- Bootstrap spacing utilities use m- for margin and p- for padding -->
+        <!-- Bootstrap spacing utilities use m- for margin and p- for padding --> 
         <section class="row my-4">
           <div class="col-12 col-md-9">
-            <h2>5-Day Forecast:</h2>
+            <h2>5-Day Forcast:</h2>
             <!-- Use justify-content utilities to change alignment of flex items on the main axis -->
             <section class="row justify-content-around">
               <div id="today">
-                <h2 id="todayC"></h2>
+                <h2 id="todayC" ></h2>
                 <p id="todayT"></p>
-                <p id="todayW"></p>
+                <p id="todayW"> </p>
                 <p id="todayH"></p>
+
+
               </div>
-      
-              <!-- Use a loop to generate cards for each day in the forecast -->
-              <template id="card-template">
-                <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                  <div class="card bg-secondary text-light">
-                    <div class="card-body">
-                      <p class="date"></p>
-                      <img class="weather-icon" src="" alt="">
-                      <p class="temp"></p>
-                      <p class="description"></p>
-                      <p class="humidity"></p>
-                    </div>
+              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="card bg-secondary text-light">
+                  <div class="card-body">
+                    <p id="date" ></p>
+                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
+                    <p id="T"></p>
+                    <p id="W"> </p>
+                    <p id="H"></p>
                   </div>
                 </div>
-              </template>
-      
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="card bg-secondary text-light">
+                  <div class="card-body">
+                    <p id="date" ></p>
+                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
+                    <p id="T"></p>
+                    <p id="W"> </p>
+                    <p id="H"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="card bg-secondary text-light">
+                  <div class="card-body">
+                    <p id="date" ></p>
+                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
+                    <p id="T"></p>
+                    <p id="W"> </p>
+                    <p id="H"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="card bg-secondary text-light">
+                  <div class="card-body">
+                    <p id="date" ></p>
+                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
+                    <p id="T"></p>
+                    <p id="W"> </p>
+                    <p id="H"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="card bg-secondary text-light">
+                  <div class="card-body">
+                    <p id="date" ></p>
+                    <!-- <img src="https://openweathermap.org/img/w/{01d}.png" alt=""> -->
+                    <p id="T"></p>
+                    <p id="W"> </p>
+                    <p id="H"></p>
+                  </div>
+                </div>
+              </div>
+
+
             </section>
           </div>
         </section>
-      
+    
         <section class="row justify-content-center my-4">
           <div class="col-12 col-sm-6 col-md-4">
           </div>
@@ -70,11 +114,10 @@
             <h2>Search for a City</h2>
             <form>
               <div class="form-group p-2">
-                <input type="text" class="form-control" id="textArea" placeholder="previous search" />
+                <input  type="text" class="form-control" id="textArea" placeholder="previous search" />
               </div>
-              <div class="form-group p-2">
-                <button type="submit" class="btn btn-primary">Search</button>
-              </div>
+
+              <button id="searchButton" class="btn form-group btn-success m-2">Search</button>
             </form>
           </div>
         </section>
