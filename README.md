@@ -33,7 +33,7 @@ To use this WeatherWhere, you need to have a web browser installed on your compu
 
 ## Usage
 
-<a href="./Assets/checktheweatha.gif"><img src="./Assets/checktheweatha.gif"></a>
+<a href="./Assets/checktheweatha (2).gif"><img src="./Assets/checktheweatha (2).gif"></a>
 
 
 1. Enter a city name in the search bar and click on the search button.
