@@ -1,26 +1,4 @@
-
-
-const apiKey = 'e056262784ffdafbf6ade366af95c9d9'
-// // let currentDay = dayjs().format("dddd, YYYY-MM-DD");
-// // const city = '';
-// const country = 'US';
-// const searchCity = document.getElementById("searchButton")
-// const textCity = document.getElementById("textArea")
-// const todayC = document.getElementById("todayC")
-// const todayT = document.getElementById("todayT")
-// const todayW = document.getElementById("todayW")
-// const todayH = document.getElementById("todayH")
-
-// var today = dayjs();
-
-
-// searchCity.addEventListener("click",function (event) {
-//     const cityName = textCity.value
-//     console.log(cityName);
-//     event.preventDefault()
-//     getForecast(cityName)
-
-// })
+const apiKey = 'e056262784ffdafbf6ade366af95c9d9';
 
 // Function to fetch weather data
 function fetchTheWeathaData(cityName) {
@@ -56,9 +34,9 @@ function fetchTheWeathaData(cityName) {
 
 
       forecast.forEach(day => {
-        const date = new Date(day.dt * 1000); // Convert timestamp to Date
-        const month = date.getMonth() + 1; // Get month 
-        const dayOfMonth = date.getDate(); // Get day 
+        const date = new Date(day.dt * 1000); // Convert timestamp to Date object
+        const month = date.getMonth() + 1; // Get month (months are zero-indexed)
+        const dayOfMonth = date.getDate(); // Get day of the month
       
         const temperature = day.main.temp;
         const description = day.weather[0].description;
@@ -92,6 +70,7 @@ function fetchTheWeathaData(cityName) {
         forecastElement.appendChild(forecastCard);
       });
       
+
       // Save search query to localStorage
       saveSearchQuery(cityName);
       displaySearchHistory();
@@ -118,6 +97,7 @@ function saveSearchQuery(query) {
 
   localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
 }
+
 
 // Function to display search history
 function displaySearchHistory() {

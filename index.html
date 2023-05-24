@@ -1,46 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./Assets/css/style.css" />
-    <title>checktheweatha</title>
+<html>
+<head>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./Assets/css/style.css">
+</head>
 
-    <script
-    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"></script>
+<body>
+  <aside id="search-history-aside">
+    <h2>Search History</h2>
+    <div id="search-history"></div>
+  </aside>
 
-    </head>
-    
+  <main>
+    <div>
+      <h3 for="city-input">Enter City:</label>
+      <input type="text" id="city-input">
+      <button id="search-button">Search</button>
+    </div>
 
-    <body>
-      <!-- Bootstrap uses color utility classes to set colors for text and background colors -->
-      <header class="p-5 mb-4 bg-primary text-light">
-        <div class="container">
-          <!-- Use align-items utilities on flexbox containers to align to start, end, center, baseline, or stretch -->
-          <div class="row justify-content-around">
-            <div class="col-12 col-md-6">
-              <h1>Weather Dashboard</h1>
-            </div>
-          </div>
-        </div>
-      </header>
-    
-      <main>
-        <div>
-          <h3 for="city-input">Enter City:</label>
-          <input type="text" id="city-input">
-          <button id="search-button">Search</button>
-        </div>
-    
-        <h3 id="current-weather"></h3>
-    
-        <div id="forecast"></div>
-      </main>
-    </body>
-    <script src="./Assets/js/script.js"></script>    
-    </html>
+    <h3 id="current-weather"></h3>
+
+    <div id="forecast"></div>
+  </main>
+
+  <script src="./Assets/js/script.js"></script>
+</body>
+</html>
+
