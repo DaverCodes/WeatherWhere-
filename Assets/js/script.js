@@ -101,6 +101,23 @@ function fetchTheWeathaData(cityName) {
     });
 }
 
+// Function to save search query to localStorage
+function saveSearchQuery(query) {
+  let searchHistory = localStorage.getItem('searchHistory');
+
+  if (searchHistory) {
+    searchHistory = JSON.parse(searchHistory);
+    // Check if the query already exists in the search history
+    if (!searchHistory.includes(query)) {
+      searchHistory.push(query);
+    }
+  } else {
+    searchHistory = [query];
+  }
+
+  localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+}
+
 function handleSearch() {
   const cityName = document.getElementById('city-input').value;
   fetchTheWeathaData(cityName);
