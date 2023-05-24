@@ -105,3 +105,15 @@ function handleSearch() {
   const cityName = document.getElementById('city-input').value;
   fetchTheWeathaData(cityName);
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Get the search button
+  const searchButton = document.getElementById('search-button');
+
+  // Add event listener for the search button
+  searchButton.addEventListener('click', handleSearch);
+
+  // Display search history on page load
+  displaySearchHistory();
+});
