@@ -30,35 +30,17 @@
         </div>
       </header>
     
-      <main class="container">
-        <!-- Bootstrap spacing utilities use m- for margin and p- for padding --> 
-        <section class="row my-4">
-          <div class="col-12 col-md-9">
-            <h2>5-Day Forcast:</h2>
-            <!-- Use justify-content utilities to change alignment of flex items on the main axis -->
-            <section class="row justify-content-around">
-            <h3 id="current-weather"></h3>
-            <div id="forecast"></div>
-            </section>
-          </div>
-        </section>
+      <main>
+        <div>
+          <h3 for="city-input">Enter City:</label>
+          <input type="text" id="city-input">
+          <button id="search-button">Search</button>
+        </div>
     
-        <section class="row justify-content-center my-4">
-          <div class="col-12 col-sm-6 col-md-4">
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <h2>Search for a City</h2>
-            <form>
-              <div class="form-group p-2">
-                <input  type="text" class="form-control" id="textArea" placeholder="previous search" />
-              </div>
-
-              <button id="searchButton" class="btn form-group btn-success m-2">Search</button>
-            </form>
-          </div>
-        </section>
+        <h3 id="current-weather"></h3>
+    
+        <div id="forecast"></div>
       </main>
-    
     </body>
     <script src="./Assets/js/script.js"></script>    
     </html>
