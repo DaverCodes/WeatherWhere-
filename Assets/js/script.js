@@ -100,3 +100,8 @@ function fetchTheWeathaData(cityName) {
       console.log('Error:', error);
     });
 }
+
+function handleSearch() {
+  const cityName = document.getElementById('city-input').value;
+  fetchTheWeathaData(cityName);
+}
