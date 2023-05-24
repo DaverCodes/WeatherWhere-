@@ -1,17 +1,28 @@
+:root {
+  --background-color: black;
+  --text-color: white;
+  --accent-color: #4CAF50;
+  --card-background-color: #f1f1f1;
+  --input-border-color: #ccc;
+  --history-item-background-color: #f2f2f2;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
   display: flex;
-  background-color: black;
+  background-color: var(--background-color);
 }
-h2{
-  color: white;
+
+h2 {
+  color: var(--text-color);
 }
 
 #search-history-aside {
   width: 200px;
-  background-color: black;
+  background-color: var(--background-color);
   padding: 20px;
   margin-right: 20px;
 }
@@ -48,7 +59,7 @@ h1 {
 .search-input {
   width: 300px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border-color);
   border-radius: 5px;
   font-size: 16px;
   outline: none;
@@ -57,8 +68,8 @@ h1 {
 .search-button {
   padding: 10px 20px;
   margin-left: 10px;
-  background-color: #4CAF50;
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--text-color);
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -85,12 +96,12 @@ h1 {
 .forecast-card {
   width: 200px;
   height: 300px;
-  background-color: #f1f1f1;
+  background-color: var(--card-background-color);
   opacity: 0.8;
   margin-right: 10px;
   display: inline-block;
   vertical-align: top;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--box-shadow-color);
   border-radius: 20px;
 }
 
@@ -112,7 +123,7 @@ h1 {
 .search-history-item {
   padding: 10px;
   margin-bottom: 5px;
-  background-color: #f2f2f2;
+  background-color: var(--history-item-background-color);
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -120,5 +131,5 @@ h1 {
 
 h3 {
   margin: 10px 0;
-  color: white;
+  color: var(--text-color);
 }
