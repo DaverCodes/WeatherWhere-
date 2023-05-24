@@ -22,6 +22,7 @@ const apiKey = 'e056262784ffdafbf6ade366af95c9d9'
 
 // })
 
+// Function to fetch weather data
 function fetchTheWeathaData(cityName) {
   // Fetch weather data from OpenWeatherMap API
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`)
@@ -118,12 +119,37 @@ function saveSearchQuery(query) {
   localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
 }
 
+// Function to display search history
+function displaySearchHistory() {
+  const searchHistoryElement = document.getElementById('search-history');
+  searchHistoryElement.innerHTML = '';
+
+  const searchHistory = JSON.parse(localStorage.getItem('searchHistory'));
+
+  if (searchHistory && searchHistory.length > 0) {
+    searchHistory.forEach(query => {
+      const historyItem = document.createElement('div');
+      historyItem.classList.add('search-history-item');
+      historyItem.textContent = query;
+
+      // Add click event listener to each history item
+      historyItem.addEventListener('click', () => {
+        document.getElementById('city-input').value = query;
+        fetchTheWeathaData(query);
+      });
+
+      searchHistoryElement.appendChild(historyItem);
+    });
+  }
+}
+
+// Function to handle search button click event
 function handleSearch() {
   const cityName = document.getElementById('city-input').value;
   fetchTheWeathaData(cityName);
 }
 
-
+// Wait for the HTML to finish loading
 document.addEventListener('DOMContentLoaded', () => {
   // Get the search button
   const searchButton = document.getElementById('search-button');
